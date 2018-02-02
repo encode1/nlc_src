@@ -6,3 +6,7 @@ threadsafe: true
 handlers:
 - url: /.*
   script: main.app
+
+
+env_variables:
+  GUARDIAN_NEWS_KEY: '8be41de9-74de-4bf3-813c-f597632dd423'
