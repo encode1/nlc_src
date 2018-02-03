@@ -1,1 +1,5 @@
 tornado==4.5.3
+peewee==3.0.10
+pymysql=0.8.0
+beautifulsoup4==4.6.0
+google-api-python-client==1.6.5

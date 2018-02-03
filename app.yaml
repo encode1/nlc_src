@@ -9,4 +9,16 @@ handlers:
 
 
 env_variables:
+  CLOUDSQL_CONNECTION_NAME: 'octopusnews-1517574214627:us-central1:nlp'
+  CLOUDSQL_USER: 'root'
+  CLOUDSQL_PASSWORD: 'root'
   GUARDIAN_NEWS_KEY: '8be41de9-74de-4bf3-813c-f597632dd423'
+  GOOGLE_APPLICATION_CREDENTIALS: 'octopusnews.json'
+  GOOGLE_NATURAL_LANG_KEY: ' AIzaSyCmdcfbwtUphrZd3gkK5_l2FcEeEV_bIgk'
+
+
+libraries:
+- name: ssl
+  version: latest
+- name: MySQLdb
+  version: "latest"

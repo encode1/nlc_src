@@ -1,5 +1,5 @@
 """
-guardiannewsapi.py
+Guardian News API wrapper
 
 """
 
@@ -56,7 +56,7 @@ class GuardianNews(object):
         request = urllib2.Request(url)
         response = urllib2.urlopen(request).read()
 
-        return json.loads(response)
+        return self.parse_article(json.loads(response))
 
     def fetch_latest_news_articles(self, query, number=10):
         """
@@ -72,3 +72,12 @@ class GuardianNews(object):
         }
 
         return self.request(**defaults)
+
+    def parse_article(self, response):
+        """
+        Extracts only the article list
+        Args:
+            query -dict- article list.
+        """
+        results = response['response']['results']
+        return results
